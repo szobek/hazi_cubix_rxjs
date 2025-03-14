@@ -12,7 +12,7 @@ const observable1 = new Observable<number>((observer)=>{
   },500)
 }).pipe(
   map(v=>v+2),
-  // filter(v=>v%2===0)
+  filter(v=>v%2!=0)
 )
 const observableSujbect=new Subject()
 observable1.subscribe(observableSujbect)
